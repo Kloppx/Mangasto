@@ -6,6 +6,24 @@
     color: white;
 } */
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1; /* Faz com que o conteúdo ocupe o espaço disponível */
+}
+
+footer {
+    background-color: #f8f9fa; /* Cor de fundo opcional */
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
 #Mangas-list .card {
     height: 400px; /* Altura fixa para o card */
     display: flex;
@@ -48,4 +66,21 @@
     align-content: center;
     background-color: rgb(109, 1, 113); /* Cor de fundo do botão */
     border-color: rgb(109, 1, 113); /* Cor da borda do botão */
+}
+
+.manga-detail {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    gap: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.manga-img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px; /* Cantos arredondados (opcional) */
+}
+
+.manga-info {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
 }

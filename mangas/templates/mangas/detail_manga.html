@@ -8,15 +8,20 @@
 <div class="container">
     {% if manga %}
         <h1>Detalhe do Mangá</h1>
-        <h2>{{ manga.title }}</h2>
-        <p>{{ manga.description }}</p>
-        <img src="{{ manga.img_path }}" class="img-fluid" alt="{{ manga.title }}">
 
-        <h3>Gêneros:</h3>
-        <div>
-            {% for gender, color in manga.genders_with_colors %}
-                <span class="badge text-white" style="background-color:{{ color }};">{{ gender }}</span>
-            {% endfor %}
+        <div class="manga-detail">
+            <img src="{{ manga.img_path }}" class="manga-img" alt="{{ manga.title }}">
+            <div class="manga-info">
+                <h2>{{ manga.title }}</h2>
+                <p>{{ manga.description }}</p>
+
+                <h3>Gêneros:</h3>
+                <div>
+                    {% for gender, color in manga.genders_with_colors %}
+                        <span class="badge text-white" style="background-color:{{ color }};">{{ gender }}</span>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     {% else %}
         <h1 class="text-danger">Mangá não encontrado!</h1>
