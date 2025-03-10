@@ -4,7 +4,7 @@ from home.views import home_view
 from mangas.views import detail_manga
 
 urlpatterns = [
-    path('', home_view),
+    path('', home_view, name='home'),
     path('mangas/', include('mangas.urls')),
     path("admin/", admin.site.urls),
 ]
