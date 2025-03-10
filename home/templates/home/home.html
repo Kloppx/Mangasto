@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id="mangas-list">
+    <div class="container py-5">
+        <div class="row">
+            {% for manga in mangas %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src={{manga.img_path}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{manga.title}}</h5>
+                        <p class="card-text">{{ manga.description }}</p>
+                        {% for gender, color in manga.genders_with_colors %}
+                            <p class="card-text gender" style="background-color:{{ color }};">{{ gender }}</p>
+                        {% empty %}
+                            <p class="card-text gender" style="background-color:{{ manga.color_gender.0 }};">{{ manga.genders.0 }}</p>
+                        {% endfor %}
+                        <a href="{% url 'detail_manga' manga.id %}" class="btn btn-primary">Ver detalhes</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+/* .navbar {
+    background-color: rgb(109, 1, 113);
+} */
+
+/* .navbar a {
+    color: white;
+} */
+
+#Mangas-list .card {
+    height: 400px; /* Altura fixa para o card */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex-grow: 1;
+    overflow: hidden; /* Garante que nada ultrapasse o limite do card */
+    padding: 10px;
+    display: -webkit-box; /* Flexbox para criar um contêiner com limite de linhas */
+    -webkit-line-clamp: 3; /* Número máximo de linhas visíveis (ajuste conforme necessário) */
+    -webkit-box-orient: vertical; /* Definir a direção como vertical */
+}
+
+.card-title, .card-text {
+    overflow: hidden; /* Garante que o texto não ultrapasse o limite */
+    text-overflow: ellipsis; /* Exibe "..." no final do texto cortado */
+    display: -webkit-box; /* Flexbox para garantir que o texto é limitado em linhas */
+    -webkit-line-clamp: 4; /* Limite de 2 linhas para o título, ajuste conforme necessário */
+    -webkit-box-orient: vertical; /* Orientação vertical para limitar as linhas */
+}
+
+.card img {
+    object-fit: cover;
+    height: 600px; /* Altura fixa para a imagem */
+}
+
+.gender {
+    display: inline-block; /* Faz o elemento se comportar como um bloco inline */
+    padding: 5px 10px; /* Adiciona preenchimento para dar mais espaço */
+    border-radius: 50px; /* Torna as bordas arredondadas, criando o efeito de pílula */
+    color: #fff; /* Define a cor do texto como branco (ajuste conforme necessário) */
+    font-weight: bold; /* Torna o texto mais destacado */
+    font-size: 12px;
+}
+
+.btn-primary {
+    margin-top: 15px;
+    align-content: center;
+    background-color: rgb(109, 1, 113); /* Cor de fundo do botão */
+    border-color: rgb(109, 1, 113); /* Cor da borda do botão */
+}
